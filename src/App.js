@@ -8,12 +8,16 @@ import * as productApi from "./services/productService";
 export default function App() {
   const [size, setSize] = useState("");
   const [products, setProducts] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    productApi.getProducts("shoes").then((response) => {
-      //products = response should not use this direct assignment
-      setProducts(response);
-    });
+    productApi
+      .getProducts("shoes")
+      .then((response) => {
+        //products = response should not use this direct assignment
+        setProducts(response);
+      })
+      .catch((e) => setError(e));
   }, []);
 
   function renderProduct(p) {
@@ -31,6 +35,8 @@ export default function App() {
   const fiteredProducts = size
     ? products.filter((p) => p.skus.find((s) => s.size === parseInt(size)))
     : products;
+
+  if (error) throw error;
 
   return (
     <>
