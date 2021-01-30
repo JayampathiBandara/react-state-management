@@ -25,3 +25,5 @@ npx create-react-app react-state-management
 - useState hook use
 
 ## 3.2 display filtered product list
+
+## 3.3 hook- use effect lifecycle hook. loaddata in page initialization
