@@ -19,3 +19,7 @@ npx create-react-app react-state-management
 - "start": "run-p start-app start-api",
 - "start-app": "cross-env REACT_APP_API_BASE_URL='http://localhost:3001/' react-scripts start",
 - "start-api": "json-server --port 3001 --watch db.json --delay 0",
+
+## 3.1 convert to controlled component [achieve 2way binding effect-react it is not 2way binding]
+
+- useState hook use
