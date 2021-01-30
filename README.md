@@ -23,3 +23,5 @@ npx create-react-app react-state-management
 ## 3.1 convert to controlled component [achieve 2way binding effect-react it is not 2way binding]
 
 - useState hook use
+
+## 3.2 display filtered product list

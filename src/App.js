@@ -19,6 +19,10 @@ export default function App() {
     );
   }
 
+  const fiteredProducts = size
+    ? productsData.filter((p) => p.skus.find((s) => s.size === parseInt(size)))
+    : productsData;
+
   return (
     <>
       <div className="content">
@@ -37,8 +41,8 @@ export default function App() {
               <option value="9">9</option>
             </select>
           </section>
-          <span>Selected Size {size}</span>
-          <section id="products">{productsData.map(renderProduct)}</section>
+          <span>{size && <h2>found {fiteredProducts.length} items</h2>}</span>
+          <section id="products">{fiteredProducts.map(renderProduct)}</section>
         </main>
       </div>
       <Footer />
