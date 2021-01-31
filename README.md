@@ -29,3 +29,5 @@ npx create-react-app react-state-management
 ## 3.3 hook- use effect lifecycle hook. loaddata in page initialization
 
 ## 3.4 Handling error via Error Boundry- Must be Class Component
+
+## 3.5 Handling Loading state
