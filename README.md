@@ -45,3 +45,5 @@ npx create-react-app react-state-management
 install dependency
 
 - npm i history@5 --save
+
+## 4.2 create seperate page for productsand remove product detail from app.js
