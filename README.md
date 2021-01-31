@@ -53,3 +53,7 @@ install dependency
 ### 4.4 Read Url parameters and redirect to page not found if incorrect param
 
 ### 4.5 Implement client side navigation
+
+### 4.6 Navigate to Shoe details page
+
+### 4.7 redirect to cart page
