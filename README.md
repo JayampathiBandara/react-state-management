@@ -51,3 +51,5 @@ install dependency
 ### 4.3 Create several pages and add multiple routes
 
 ### 4.4 Read Url parameters and redirect to page not found if incorrect param
+
+### 4.5 Implement client side navigation
