@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
+import PageNotFound from "./PageNotFound";
 import useFetch from "./services/useFetch";
 import Spinner from "./Spinner";
 
 export default function Products() {
   const [size, setSize] = useState("");
+  const { category } = useParams();
+  //const [ category ] = useParams(); // IN Correct -time wasted
 
   // use fetch return "data", it is aliase with "products"
   const { data: products, error, loading } = useFetch(
-    "products?category=shoes"
+    "products?category=" + category
   );
 
   function renderProduct(p) {
@@ -34,6 +38,9 @@ export default function Products() {
         <Spinner />
       </>
     );
+
+  if (products.length === 0) return <PageNotFound />;
+
   return (
     <>
       <section id="filters">
