@@ -35,3 +35,13 @@ npx create-react-app react-state-management
 ## 3.6 Implementing Async/await in useEffect
 
 ## 3.7 Consuming a Custom Hook
+
+# 4 Implementing Routing – react router v 6
+
+## 4 install react Router v-6 and add it to index page
+
+- npm i react-router-dom@6.0.0-beta.0 --save
+
+install dependency
+
+- npm i history@5 --save
