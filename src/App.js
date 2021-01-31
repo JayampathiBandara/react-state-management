@@ -3,28 +3,17 @@ import "./App.css";
 import Footer from "./Footer";
 import Header from "./Header";
 //import productsData from "./services/products.data";
-import * as productApi from "./services/productService";
+//import * as productApi from "./services/productService";
+import useFetch from "./services/useFetch";
 import Spinner from "./Spinner";
 
 export default function App() {
   const [size, setSize] = useState("");
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function init() {
-      try {
-        const response = await productApi.getProducts("shoes");
-        setProducts(response);
-      } catch (e) {
-        setError(e);
-      } finally {
-        setLoading(false);
-      }
-    }
-    init();
-  }, []);
+  // use fetch return "data", it is aliase with "products"
+  const { data: products, error, loading } = useFetch(
+    "products?category=shoes"
+  );
 
   function renderProduct(p) {
     return (

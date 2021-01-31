@@ -31,3 +31,7 @@ npx create-react-app react-state-management
 ## 3.4 Handling error via Error Boundry- Must be Class Component
 
 ## 3.5 Handling Loading state
+
+## 3.6 Implementing Async/await in useEffect
+
+## 3.7 Consuming a Custom Hook
