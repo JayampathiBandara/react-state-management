@@ -13,14 +13,17 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    productApi
-      .getProducts("shoes")
-      .then((response) => {
-        //products = response should not use this direct assignment
+    async function init() {
+      try {
+        const response = await productApi.getProducts("shoes");
         setProducts(response);
-      })
-      .catch((e) => setError(e))
-      .finally(() => setLoading(false));
+      } catch (e) {
+        setError(e);
+      } finally {
+        setLoading(false);
+      }
+    }
+    init();
   }, []);
 
   function renderProduct(p) {
