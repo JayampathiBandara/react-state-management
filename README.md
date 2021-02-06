@@ -76,3 +76,9 @@ install dependency
 
 - empty cart define in app.js
 - use enumerator[javascript doesn't support enum. so use object] to maintain page validation/saving status
+- 6.3.1 State Enum Pattern for form validation
+- 6.3.2 Finite state machine pattern
+
+### 6.4 Display error messages
+
+- formik or react form hook library can be used
