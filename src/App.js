@@ -20,16 +20,26 @@ export default function App() {
       // SHOULD RETURN NEW ARRAY with new reference. then only component re-render
       // further react has batch uppdate concept
       if (itemInCart) {
+        // Return new array with the matching item replaced
         return items.map((i) =>
           // return NEW ARRAY
           i.sku === sku ? { ...i, quantity: i.quantity + 1 } : i
         );
       } else {
-        //return [new array] appending new item
+        // Return new array with the new item appended
         return [...items, { id, sku, quantity: 1 }];
       }
     });
   }
+
+  function updateQuantity(sku, quantity) {
+    setCart((items) => {
+      return quantity === 0
+        ? items.filter((i) => i.sku !== sku) //reomve item => return all except the item to be removed
+        : items.map((i) => (i.sku === sku ? { ...i, quantity } : i));
+    });
+  }
+
   return (
     <>
       <div className="content">
@@ -42,7 +52,10 @@ export default function App() {
               path="/:category/:id"
               element={<Detail addToCart={addToCart} />}
             />
-            <Route path="/cart" element={<Cart cart={cart} />} />
+            <Route
+              path="/cart"
+              element={<Cart cart={cart} updateQuantity={updateQuantity} />}
+            />
           </Routes>
         </main>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 import useFetchAll from "./services/useFetchAll";
 import Spinner from "./Spinner";
 
-export default function Cart({ cart }) {
+export default function Cart({ cart, updateQuantity }) {
   //call in App.js
   const urls = cart.map((i) => `products/${i.id}`);
   const { data: products, loading, error } = useFetchAll(urls);
@@ -24,6 +24,7 @@ export default function Cart({ cart }) {
           <p>
             <select
               aria-label={`Select quantity for ${name} size ${size}`}
+              onChange={(e) => updateQuantity(sku, parseInt(e.target.value))}
               value={quantity}
             >
               <option value="0">Remove</option>

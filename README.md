@@ -59,3 +59,5 @@ install dependency
 ### 4.7 redirect to cart page
 
 ### 5.6 add shoes to cart
+
+### 5.7 update quantity of the cart
