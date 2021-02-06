@@ -63,3 +63,7 @@ install dependency
 ### 5.7 update quantity of the cart
 
 ### 5.8 store data locally using localStaorage
+
+## 6.0 Implementing Form Validation
+
+### 6.1 add Checkout form
