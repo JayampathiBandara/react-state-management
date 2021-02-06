@@ -61,3 +61,5 @@ install dependency
 ### 5.6 add shoes to cart
 
 ### 5.7 update quantity of the cart
+
+### 5.8 store data locally using localStaorage
