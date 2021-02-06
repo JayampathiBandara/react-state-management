@@ -67,3 +67,12 @@ install dependency
 ## 6.0 Implementing Form Validation
 
 ### 6.1 add Checkout form
+
+### 6.2 add navigation
+
+- import { useNavigate } from "react-router-dom";
+
+### 6.3 clear the cart after submit it
+
+- empty cart define in app.js
+- use enumerator[javascript doesn't support enum. so use object] to maintain page validation/saving status
