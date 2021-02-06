@@ -57,3 +57,5 @@ install dependency
 ### 4.6 Navigate to Shoe details page
 
 ### 4.7 redirect to cart page
+
+### 5.6 add shoes to cart
