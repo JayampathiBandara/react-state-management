@@ -97,3 +97,7 @@ install dependency
     when it is unmount, isMounted.current property is set to false,
     before excute line 19.
     When it finish line 18, unmount has already happen.
+
+### 7.4 Usage of useRef Hook . Bug fix -useEffect infinite loop call
+
+compare current value property of `useRef` Hook
