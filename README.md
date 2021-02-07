@@ -82,3 +82,18 @@ install dependency
 ### 6.4 Display error messages
 
 - formik or react form hook library can be used
+
+## 7 Managing State via Refs
+
+### 7.2 Usage of useRef Hook . navigation bug fix
+
+- Fix bug between navigate components
+- Here if we first click on shoes first and, before load the data quickly click on, home or cart link following error will be appeared. Because, inside shoe component,after it load the data when it try to set values using re-rendering the components, it is no longer there. Because that component is already UnMounted and new cart or home compoenent is mounted.
+- As a solution we can use “useRef” hook
+
+### 7.3 Why we return function from “sideEffect” hook
+
+    Since any function returned from useEfect  is called
+    when it is unmount, isMounted.current property is set to false,
+    before excute line 19.
+    When it finish line 18, unmount has already happen.
